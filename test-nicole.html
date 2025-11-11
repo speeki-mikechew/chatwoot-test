@@ -1,0 +1,27 @@
+<!-- Save as: test-nicole.html on your machine -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Nicole Locally</title>
+</head>
+<body>
+    <h1>Testing Nicole Chat Widget</h1>
+    <p>This page is on your machine, so it CAN reach localhost:3001</p>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://nicole-ai-sales.speeki.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'xigeryBg6H2omj8QELYJt7bF',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+</body>
+</html>
