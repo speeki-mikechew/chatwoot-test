@@ -6,22 +6,19 @@
 </head>
 <body>
     <h1>Testing Nicole Chat Widget</h1>
-    <p>Testing production Chatwoot instance at chatwoot-production-dec2.up.railway.app</p>
+    <p>Testing Nicole Chat Widget at web-production-b2d5c.up.railway.app</p>
 
+    <!-- Nicole Chat Widget -->
     <script>
-      (function(d,t) {
-        var BASE_URL="https://chatwoot-production-dec2.up.railway.app";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          window.chatwootSDK.run({
-            websiteToken: 'gDdtVttNPK6QEZ4g2t8iW7WT',
-            baseUrl: BASE_URL
-          })
-        }
-      })(document,"script");
+        window.NicoleConfig = {
+            apiUrl: 'https://web-production-b2d5c.up.railway.app',
+            primaryColor: '#0066cc',
+            greeting: "Hi! I'm Nicole from Speeki. How can I help you today?",
+            headerTitle: 'Nicole',
+            headerSubtitle: 'Speeki Assistant'
+        };
     </script>
+    <script src="https://web-production-b2d5c.up.railway.app/widget/nicole.js"></script>
+    <link rel="stylesheet" href="https://web-production-b2d5c.up.railway.app/widget/nicole.css">
 </body>
 </html>
